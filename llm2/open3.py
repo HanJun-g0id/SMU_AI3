@@ -25,6 +25,20 @@ def test(imgName, prompt):
     )
     print(response.choices[0].message.content)
 
+    # 답변 내용 result 변수에 저장
+    result = response.choices[0].message.content
+    # TTS(Text to Speech)로 답변 음성 생성 및 저장
+    resultMp3 = "result2.mp3"
+    response2 = model.audio.speech.create(
+        model="tts-1",
+        input=result,
+        voice="alloy",
+        response_format="mp3",
+        speed=1.1,
+    )
+    response2.stream_to_file(resultMp3)
+
+
 if __name__ == '__main__':
     imgName = "img/amd.jpg"
     prompt = "이미지에 있는 반도체의 역할이 무엇인지 알려줘"
