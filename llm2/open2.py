@@ -8,5 +8,5 @@ def test(prompt):
     print(result)
 
 if __name__ == '__main__':
-    prompt = "sk하이닉스에 대해 알려줘"
+    prompt = "SK하이닉스에 대해서 알려줘"
     test(prompt)

@@ -21,3 +21,9 @@ if __name__ == '__main__':
 
     print(openchain.run("카메라"))
     print(genchain.run("카메라"))
+
+
+
+
+
+

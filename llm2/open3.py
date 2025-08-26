@@ -25,19 +25,16 @@ def test(imgName, prompt):
     )
     print(response.choices[0].message.content)
 
-    # 답변 내용 result 변수에 저장
-    result = response.choices[0].message.content
-    # TTS(Text to Speech)로 답변 음성 생성 및 저장
-    resultMp3 = "result2.mp3"
-    response2 = model.audio.speech.create(
+    # 결과를 음성으로 변환 하다.
+    resultMp3 = "result.mp3"
+    response = model.audio.speech.create(
         model="tts-1",
-        input=result,
+        input=response.choices[0].message.content,
         voice="alloy",
         response_format="mp3",
         speed=1.1,
     )
-    response2.stream_to_file(resultMp3)
-
+    response.stream_to_file(resultMp3)
 
 if __name__ == '__main__':
     imgName = "img/amd.jpg"

@@ -43,3 +43,12 @@ if file:
         st.info(response.choices[0].message.content)
         makeAudio(response.choices[0].message.content, "imgresult.mp3")
         st.audio("audio/imgresult.mp3", autoplay=True, width=1)
+
+
+
+
+
+
+
+
+

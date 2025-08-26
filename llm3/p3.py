@@ -22,3 +22,10 @@ if st.button("SEND"):
         st.code(result, language=selected_option)
     else:
         st.info(" 질문과 언어를 선택하세요")
+
+
+
+
+
+
+

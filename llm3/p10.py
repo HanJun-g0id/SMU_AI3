@@ -38,3 +38,9 @@ if picture:
         st.info(response.choices[0].message.content)
         makeAudio(response.choices[0].message.content, "img_capture_result.mp3")
         st.audio("audio/img_capture_result.mp3", autoplay=True, width=1)
+
+
+
+
+
+

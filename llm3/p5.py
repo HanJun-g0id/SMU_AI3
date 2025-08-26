@@ -21,3 +21,5 @@ if picture:
         response = model.generate_content( [ text , img ] )
         my_bar.empty()
         st.info(response.text)
+
+

@@ -23,3 +23,14 @@ if st.button("SEND"):
         st.info(result)
     else:
         st.info("질문과 언어를 입력 하세요")
+
+
+
+
+
+
+
+
+
+
+
